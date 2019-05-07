@@ -1,0 +1,182 @@
+{
+    "title": "FORTNITE",
+    "description": "REST API about Fortnite game",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/skynewz-api-fortnite.herokuapp.com/3.1.5/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://skynewz-api-fortnite.herokuapp.com/api",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "Bearer": {
+                "label": "Authorization (Bearer)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_check": {
+            "main": "./lib/actions/get_check.js",
+            "title": "Get Fortnite game status",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_check.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_news": {
+            "main": "./lib/actions/get_news.js",
+            "title": "Get Fortnite News",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_news.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_oauth_token": {
+            "main": "./lib/actions/post_oauth_token.js",
+            "title": "Get a Bearer token",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_oauth_token.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_pve_info": {
+            "main": "./lib/actions/get_pve_info.js",
+            "title": "Get Fortnite PVE Info (storm, etc)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_pve_info.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_pve_user__username_": {
+            "main": "./lib/actions/get_pve_user__username_.js",
+            "title": "Get PVE Stat by given username",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_pve_user__username_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_stats_id__plateform___id_": {
+            "main": "./lib/actions/get_stats_id__plateform___id_.js",
+            "title": "Get user's stats by user id",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_stats_id__plateform___id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_stats__plateform___username_": {
+            "main": "./lib/actions/get_stats__plateform___username_.js",
+            "title": "Get user's stats by username",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_stats__plateform___username_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_store": {
+            "main": "./lib/actions/get_store.js",
+            "title": "Get Fortnite Store",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_store.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_user__plateform___username_": {
+            "main": "./lib/actions/get_user__plateform___username_.js",
+            "title": "Get a user by username",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_user__plateform___username_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "plateform": {
+            "required": true,
+            "type": "string"
+        },
+        "username": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
